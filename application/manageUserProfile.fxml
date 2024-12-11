@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Boundary.manageUserProfileBoundary">
+   <children>
+      <TableView fx:id="table" layoutY="132.0" onMouseClicked="#rowClicked" prefHeight="268.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="profileColumn" prefWidth="129.3333181142807" text="Profile" />
+          <TableColumn fx:id="descriptionColumn" prefWidth="338.66661071777344" text="Description" />
+            <TableColumn fx:id="statusColumn" prefWidth="130.66665649414062" text="Status" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="133.0" fitWidth="147.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/logo-no-background.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="206.0" layoutY="4.0" text="Updating User Account">
+         <font>
+            <Font name="Felix Titling" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="logout" layoutX="531.0" layoutY="14.0" mnemonicParsing="false" onAction="#userLogOut" text="log out" />
+      <Button fx:id="cancelButton" layoutX="532.0" layoutY="93.0" mnemonicParsing="false" onAction="#userCancel" prefHeight="25.0" prefWidth="55.0" text="Cancel" />
+      <Button fx:id="viewButton" layoutX="531.0" layoutY="54.0" mnemonicParsing="false" onAction="#viewClicked" prefHeight="25.0" prefWidth="55.0" text="View" />
+      <Label layoutX="126.0" layoutY="56.0" text="Enter Profile Name:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="profileTextField" layoutX="261.0" layoutY="54.0" promptText="Profile" />
+      <Button layoutX="420.0" layoutY="54.0" mnemonicParsing="false" onAction="#searchButtonAction" text="Search" />
+      <Label fx:id="profileLabel" layoutX="280.0" layoutY="91.0" text="Profile">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
